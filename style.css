@@ -34,3 +34,10 @@ button:hover {
   background: #8d8fbb;
   cursor: pointer;
 }
+
+/* Adding a little animation to the buttom when clicked */
+button:active {
+  background-color: #8d8fbb;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
