@@ -8,6 +8,8 @@ the user will see a new, randomized message.
 ## How To Use
 
 To access the message generator program click the link below to load the website on Github Pages.
+<br/>
+[Mixed Messages](https://asbillt.github.io/mixed-messages/)
 
 ## Technologies
 
