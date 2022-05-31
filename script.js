@@ -1,41 +1,48 @@
+// Define that the JavaScript code should be executed in 'strict mode'.
 "use strict";
 
+// Declare variables to be assigned html elements.
 const messageGen = document.querySelector(".generate");
 let message = document.querySelector(".message");
 
-const array1 = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
+// Create 3 arrays that contain the phrases that make up
+// the message.
+const days = [
+  "It's Monday",
+  "It's Tuesday",
+  "It's Wednesday",
+  "It's Thursday",
+  "It's Friday",
+  "It's Saturday",
+  "It's Sunday",
 ];
 
-const array2 = [
-  "Rise and Shine",
-  "It's getting late",
-  "Cloudy weather",
-  "I'm tired",
+const phrases = [
+  "rise and shine,",
+  "it's getting late,",
+  "cloudy weather,",
+  "I'm tired,",
 ];
 
-const array3 = [
-  "Let's get some coffee",
-  "Time to sleep",
-  "We are going to the beach",
-  "Time to drive",
+const actions = [
+  "let's get some coffee!",
+  "time to sleep.",
+  "we are going to the beach!",
+  "time to drive.",
 ];
 
-//Method 2
+// Method 2
+// Define a function that returns a random array element.
 const generateRandomWord = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };
 
+// Define a function that returns a random template literal
+// comprised of random phrases, one from each array.
 const generateRandomMessage = () => {
-  return `${generateRandomWord(array1)}, ${generateRandomWord(
-    array2
-  )} ${generateRandomWord(array3)}`;
+  return `${generateRandomWord(days)}, ${generateRandomWord(
+    phrases
+  )} ${generateRandomWord(actions)}`;
 };
 
 // Method1
@@ -47,7 +54,7 @@ const generateRandomMessage = () => {
 // Test to make sure the random message generator works
 console.log(generateRandomMessage());
 
-// Adds an event listener to the button which generates a random message after the button is clicked
+// Adds an event listener to the button which generates a random message after the button is clicked.
 messageGen.addEventListener("click", function () {
   message.textContent = generateRandomMessage();
 });
